@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-size: 10px;
+   font-family: "Poppins", sans-serif;
+}
+
+body {
+   height: 100vh;
+}
+
+.logo {
+   height: 70px;
+   width: 70px;
+   margin-right: 10px;
+   border-radius: 8px;
+}
+
+.logo-name {
+   font-size: 4rem;
+   color: #064d99;
+   text-decoration: none;
+}
+
+nav {
+   border-bottom: 1px solid #064d99;
+   position: sticky;
+   top: 0;
+   left: 0;
+   background-color: #fff;
+   box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.1);
+   z-index: 100;
+}
+
+nav .container ul li {
+   display: inline;
+   padding: 10px;
+   margin: 10px;
+}
+
+nav a {
+   color: #064d99;
+   font-size: 1.7rem;
+   font-weight: 500;
+   text-decoration: none;
+}
+
+nav a:hover {
+   color: black;
+   text-decoration: none;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   transition: 0.5s;
+}
+
+/* .container img{
+   margin-left: 10px;
+   position: relative;
+   right: 0;
+} */
+
+.container .header-left {
+   text-decoration: none;
+   margin-right: auto;
+}
+
+
+
+
+/* profile part  */
+
+/* .profile{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+ }
+
+ .profile .profile-pic{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}  
+
+ .profile label{
+    display: block;
+    width: 200px;
+    background: #064d99;
+    color: #fff;
+    font-size: 12px;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+ }
+
+ .profile .none{
+    display: none
+ } */
+
+.update_profile {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.update_profile form {
+   padding: 20px;
+   background-color: #fff;
+   text-align: center;
+   width: 70%;
+}
+
+.update_profile form .msg {
+   margin: 5px;
+   width: 100%;
+   /* border-radius: 5px; */
+   padding: 10px;
+   text-align: center;
+   background: #064d99;
+   color: #fff;
+   font-size: 15px;
+}
+
+.update_profile form input[type='submit'] {
+   display: block;
+   width: 200px;
+   background: #064d99;
+   color: #fff;
+   font-size: 18px;
+   padding: 12px;
+   margin: 10px auto;
+   cursor: pointer;
+   text-align: center;
+   border: none;
+}
+
+.update_profile form .e_link {
+   display: block;
+   width: 200px;
+   background: #064d99;
+   color: #fff;
+   font-size: 18px;
+   text-decoration: none;
+   padding: 12px;
+   margin: 10px auto;
+   cursor: pointer;
+   text-align: center;
+   border: none;
+}
+
+.update_profile form input[type='submit']:hover {
+   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.14);
+}
+
+.center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.update_profile form .profile_pic {
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+/* profile pic viewer */
+
+.viewer {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   /* padding-top: 60px; */
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+@keyframes viewer {
+   0% {
+      transform: scale(0, 0);
+   }
+
+   /* 50% {
+      transform: scale(0.5, 0.5);
+   }
+
+   75% {
+      transform: scale(0.5, 0.5);
+   } */
+
+   100% {
+      transform: scale(1, 1);
+   }
+}
+
+.viewer-content {
+   margin: auto;
+   padding: 5%;
+   display: block;
+   width: 80%;
+   max-width: 80%;
+   animation: viewer 0.5s ease-in;
+}
+
+.closebtn {
+   position: absolute;
+   top: 10%;
+   right: 5%;
+   color: whitesmoke;
+   font-size: 80px;
+   /* font-weight: bold; */
+   transition: 0.2s;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.profile-pic:hover {
+   /* opacity: 0.7; */
+   cursor: pointer;
+}
+
+.profile-pic {
+   color: transparent;
+   transition: all .3s ease;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   transition: all .3s ease;
+
+   input {
+      display: none;
+   }
+
+   img {
+      position: absolute;
+      object-fit: cover;
+      width: 180px;
+      height: 180px;
+      box-shadow: 0 0 10px 0 rgba(255, 255, 255, .35);
+      border-radius: 100px;
+      z-index: 0;
+   }
+
+   .-label {
+      cursor: pointer;
+      height: 180px;
+      width: 180px;
+   }
+
+   &:hover {
+      .-label {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: rgba(0, 0, 0, .8);
+         z-index: 10000;
+         color: rgb(250, 250, 250);
+         transition: background-color .2s ease-in-out;
+         border-radius: 100px;
+         margin-bottom: 0;
+      }
+   }
+
+   span {
+      display: inline-flex;
+      padding: .2em;
+      height: 2em;
+   }
+}
+
+.update_profile form .flex {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 20px;
+   gap: 15px;
+}
+
+.update_profile form .flex .inputbox {
+   width: 50%;
+   margin-right: 40px;
+}
+
+.update_profile form .flex .inputbox span {
+   text-align: left;
+   display: block;
+   margin-top: 15px;
+   font-size: 20px;
+   color: #222;
+   font-weight: 500;
+}
+
+.update_profile form .flex .inputbox .box {
+   width: 100%;
+   background: #e6e3e3;
+   padding: 12px 14px;
+   font-size: 15px;
+   /* color: #222; */
+   margin-top: 10px;
+   border: none;
+   outline: none;
+}
+
+
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+::-webkit-scrollbar-track {
+   background: #aaa;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #064d99;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #888;
+}
+
+.update_profile form .flex .inputbox .aadhar {
+   height: 82%;
+   width: 100%;
+   position: relative;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+.update_profile form .flex .inputbox .aadhar>img {
+   position: relative;
+}
+
+
+@media(max-width:996px) {
+   .update_profile form .flex {
+      flex-wrap: wrap;
+      gap: 0;
+   }
+
+   .update_profile form .flex .inputbox {
+      width: 100%;
+   }
+
+   /* .update_profile form {
+      width: 100%;
+   } */
+
+   .container {
+      flex-direction: column;
+      flex-wrap: wrap;
+   }
+
+   .container .header-left {
+      margin: 10px;
+   }
+}
+
+@media(max-width:446px) {
+   .logo-name {
+      font-size: 3rem;
+   }
+
+   .update_profile form .flex .inputbox {
+      width: 100%;
+   }
+
+   .update_profile form {
+      width: 100%;
+   }
+}

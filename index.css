@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(to right, #3a7bd5, #3a6073); */
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+}
+
+.container {
+    height: 99vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    /* position: relative;
+    left: 44%; */
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 12px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.info a {
+    text-decoration: none;
+}
+
+.info .greet {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.info p {
+    /* position: absolute;
+    top: 40%;
+    left: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #064d99;
+}
+
+.info .msg {
+    margin: 5px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background: #064d99;
+    color: #fff;
+    font-size: 15px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .login {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.container .login a {
+    text-decoration: none;
+    color: blue;
+    font-size: 15px;
+}
+
+.container .login a:hover {
+    text-decoration: underline;
+}
+
+.show-login {
+    margin: 10px 20px;
+}
+
+.options label {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #3498db;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.19);
+}
+
+/* .options input[type=checkbox] {
+    visibility: hidden;
+} */
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    width: 50rem;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    transition: 1s ease-in-out;
+    /* transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms */
+}
+
+/* .popup.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms
+} */
+
+.popup.hide {
+    top: -150px;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    /* transform: translate(-50%, -50%) scale(1.25); */
+    transition: 0.5s ease-in;
+    /* transition: top 0ms ease-in-out 200ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms */
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup .close-btn:hover {
+    color: #3498db;
+}
+
+.popup h2 {
+    text-align: center;
+    margin: 10px 0 20px;
+    color: #3498db;
+    font-size: 25px;
+}
+
+.popup .form .form-element,
+.username-popup .form .form-element {
+    margin: 15px 0;
+}
+
+.popup .form .phone .form-element {
+    margin: 0;
+}
+
+.popup .form .form-element label,
+.username-popup .form .form-element label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+}
+
+.form .flexBox {
+    display: flex;
+}
+
+.form .box {
+    margin: 10px;
+}
+
+.form .form-element input:focus {
+    color: #3498db;
+    border-bottom-width: 2px;
+}
+
+.popup .form .form-element input {
+    margin-top: 5px;
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+}
+
+#p_user input,
+#v_user input,
+#ve_user input {
+    color: rgb(140 119 119);
+    ;
+}
+
+.aadhar label {
+    font-size: 17px;
+    font-weight: 500;
+    color: #222;
+}
+
+.aadhar .input {
+    margin-top: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.aadhar .input input {
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+}
+
+
+/* .popup .form .form-element input[type="checkbox"]{
+    margin-right: 5px;
+} */
+
+/* .popup .form .form-element button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #222;
+    color: #f5f5f5;
+    cursor: pointer;
+} */
+
+.form .btn {
+    margin: 15px 0;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.form .btn .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -105%;
+    z-index: -1;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f08e1, #56d8e4, #9f08e1);
+    transition: all 0.4s;
+}
+
+/* .form .btn-otp .inner {
+    height: 45px;
+    width: 80px;
+    background: -webkit-linear-gradient(right, #56e475, #37e108, #56e46e, #08e121);
+    position: absolute;
+    right: 8%;
+    z-index: -1;
+} */
+
+.form .btn:hover .inner {
+    left: 0;
+}
+
+.form .btn button {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.popup .form .form-element {
+    margin-top: 10px;
+}
+
+.popup .signup-link a:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.signup-link a {
+    font-size: 18px;
+    color: #3498db;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+.popup-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    z-index: 1000;
+
+}
+
+.popup-staff {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #fff;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.popup-content {
+    font-size: 12px;
+    width: 100%;
+}
+
+.popup-content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content h3{
+    font-size: 18px;
+}
+
+.popup-content i{
+    position: fixed;
+    right: 25%;
+    top: 58%;
+}
+
+.popup-staff .close {
+
+    position: absolute;
+
+    top: 0;
+    right: 10px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #333;
+
+}
+
+.popup-staff input, .popup-staff select{
+
+    padding: 10px;
+    margin: 10px 0;
+
+    border: none;
+    background: #f1f1f1;
+    color: #222;
+    font-size: 12px;
+
+}
+
+.popup-staff form select{
+    width: 73%;
+}
+
+.popup-staff button {
+
+    background-color: #4caf50;
+
+    color: #fff;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+
+/* responsive css  */
+
+
+@media(max-width:1052px) {
+
+    /* .info p {
+        font-size: 4rem;
+    } */
+    .info .greet {
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+}
+
+@media(max-width:713px) {
+    .info p {
+        font-size: 3.5rem;
+    }
+
+    .popup {
+        width: 45rem;
+    }
+}
+
+@media(max-width:512px) {
+    .info p {
+        font-size: 2.5rem;
+    }
+
+    .popup {
+        width: 35.5rem;
+        top: 53%;
+    }
+
+    .flexBox {
+        flex-wrap: wrap;
+    }
+
+    .flexBox .box {
+        margin: 0;
+    }
+}
+
+@media(max-width:512px){
+    .popup-content h3{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:378px) {
+    .info p {
+        font-size: 2.37rem;
+    }
+
+    .popup {
+        width: 32rem;
+        top: 57%;
+    }
+
+    .flexBox {
+        flex-wrap: wrap;
+    }
+
+    .flexBox .box {
+        margin: 0;
+    }
+}

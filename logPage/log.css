@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(to right, #3a7bd5, #3a6073); */
+    font-family: "Poppins", sans-serif; 
+    height: 100vh;
+}
+
+.preloader {
+    background: #fff url(../images/web-preloader.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.box .msg{
+    position: fixed;
+    left: 20%;
+    margin: 5px;
+    width: 15%;
+    /* border-radius: 5px; */
+    padding: 10px;
+    text-align: center;
+    color: red;
+    
+}
+
+.box .msg li{
+    font-size: 14px;
+}
+
+.container {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.logo{
+    width: 100px;
+    border-radius: 12px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px ;
+    text-decoration: none;
+    
+}
+
+.info span{
+    height: 150px;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #064d99;
+}
+
+/* .container .back-btn {
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.form .back-btn:hover{
+    color: #3498db;
+} */
+
+
+.container{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    opacity: 1;
+    padding: 20px 30px;
+    background: #fff;
+    /* transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms */
+}
+
+/* .container:hover{
+    top: 59%;
+    width: 400px;
+    transition: all ease-in-out 0.4s;
+    /* transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms */
+/* } */
+
+.container .form h2{
+    text-align: center;
+    margin: 10px 0 20px;
+    color: #3498db;
+    font-size: 25px;
+}
+
+.container .form .form-element {
+    margin: 15px 0;
+}
+
+.container .form .form-element label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #222;
+}
+
+.form .form-element input {
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+    /* border: 1px solid silver ; */
+}
+
+.form .form-element input:focus {
+    color: #3498db;
+    border-bottom-width: 2px;
+}
+
+.container .form .form-element input {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+}
+
+.container form .form-element i.active::before {
+    content: "\f070";
+    color: #333;
+}
+
+.container form .form-element i {
+    position: absolute;
+    right: 85px;
+    font-size: 20px;
+    color: #ccc;
+    top: 61.5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* .popup .form .form-element input[type="checkbox"]{
+    margin-right: 5px;
+} */
+
+/* .popup .form .form-element button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #222;
+    color: #f5f5f5;
+    cursor: pointer;
+} */
+
+.form .btn {
+    margin: 30px 0;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.form .btn .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -105%;
+    z-index: -1;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f08e1, #56d8e4, #9f08e1);
+    transition: all 0.4s;
+}
+
+.form .btn:hover .inner {
+    left: 0;
+}
+
+.form .btn button {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* .popup .form .form-element {
+    margin-top: 10px;
+}
+
+.popup .form .form-element a {
+    color: #3498db;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.popup .form .form-element a:hover {
+    text-decoration: underline;
+}
+
+.form .signup-link {
+    font-weight: 500;
+    text-align: center;
+}
+
+.form .signup-link a {
+    color: #3498db;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form .signup-link a:hover {
+    text-decoration: underline;
+} */
+
+/* responsive css */
+
+
+@media(max-width:558px){
+    .info span{
+        font-size: 4rem;
+    }
+    .box .msg{
+        bottom: 5%;
+        width: 50%;
+    }
+}
+@media(max-width:446px){
+    .info span{
+        font-size: 3rem;
+    }
+    .container{
+        width: 30rem;
+    }
+    .container .form .form-element i{
+        right: 45px;
+    }
+    .box .msg{
+        bottom: 5%;
+        width: 60%;
+    }
+}

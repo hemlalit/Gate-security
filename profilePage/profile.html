@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+<body>
+    
+    <script src="profile.js"></script>
+    <nav>
+        <!-- <div class="nav-seperation"></div> -->
+        <div class="container-fluid">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="../images/college_logo.jpg" width="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <span class="fs-4 text-secondary font-monospace fw-bold">GATE SAFE</span>
+             </a>
+              <ul class="nav nav-pills ">
+                <li class="nav-item"><a href="../userpage/users.html" class="nav-link ">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Visits</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">profile</a></li>
+              </ul>
+            </header>
+          </div>
+
+    </nav>
+    <main>
+        <div class="upper">
+            <span>Profile</span>
+<!--profile icon start-->
+            <div class="profile-pic-wrapper">
+                <div class="pic-holder">
+                  <!-- uploaded pic shown here -->
+                  <img id="profilePic" class="pic" src="../images/profile_image.png">
+              
+                  <Input class="uploadProfileInput" type="file" name="profile_pic" id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
+                  <label for="newProfilePhoto" class="upload-file-block">
+                    <div class="text-center">
+                      <div class="g">
+                        <i class="camera"></i>
+                      </div>
+                      <div class="text-uppercase">
+                        Update <br /> Profile Photo
+                      </div>
+                    </div>
+                  </label>
+                </div>
+            </div>
+<!--profile icon end-->
+            <!--<div class="upper-username">
+                <input type="text" placeholder="">
+            </div>-->
+        </div>
+        <div class="lower">
+            <div class="items">
+                <div class="name">
+                    <span>Name:</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="items">
+                <div class="use-id">
+                    <span>User Id:</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="items">
+                <div class="Email">
+                    <span>Email:</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="items">
+                <div class="Contact">
+                    <span>Contact Info:</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="items">
+                <div class="user-type">
+                    <span>User Type:</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="items">
+                <div class="id-proof">
+                    <span>Id Proof:</span>
+                    <div>
+                        <button>Click here to view your Id</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="break"></div>
+
+        <footer>
+            <div class="end">
+                <button class="btn">< Go Back</button>
+                <button class="btn">Update Profile ></button>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
