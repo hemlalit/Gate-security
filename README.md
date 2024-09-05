@@ -1,1 +1,1 @@
-# Gate-security
+# Vaze-security
