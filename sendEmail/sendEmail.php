@@ -10,6 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
+
 function sendEmail($sub, $msg, $goToLocation, $imagePath = '', $qrCodePath = '')
 {
     $time_now = date('h:i:sa', strtotime('now'));

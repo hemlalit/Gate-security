@@ -484,9 +484,9 @@
                                     <br/>
                                     <br/>
                                     <div class="user-exit">
-                                    
-                                        <button class="otp-btn elongate redBtn" name="user-exit" >Exit</button>
-                                        
+                                        <!-- 
+                                            <button class="otp-btn elongate redBtn" name="user-exit" >Exit</button>
+                                        -->
                                     </div>
                                 </div>
                             </div>
@@ -626,7 +626,7 @@
                                         <div class="status draw"></div>
                                     </div>
                                     <input type="text" disabled class="box" name="update_email" value=" ' . $fetch["email"] . '">
-                                    <button class="otp-btn" id="send-otp" name="send-otp">OTP</button>
+                                    
                         
                                     <div id="verify-otp">
                                         <!-- 
@@ -665,7 +665,7 @@
 
             } else if ($staffData['role'] == 'teacher') {
 
-                echo 'you did it, im proud of you. Very good';
+                // echo 'you did it, im proud of you. Very good';
 
                 echo '
                 <div class="center">

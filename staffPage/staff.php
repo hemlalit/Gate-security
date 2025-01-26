@@ -380,8 +380,9 @@ if (!isset($_SESSION['staff-data'])) {
                                     </div>
                                     ';
 
+                            }else{
+                                echo 'Visitor not entered yet';
                             }
-                            $j--;
                         } //while loop
         
                     } else {
@@ -396,8 +397,6 @@ if (!isset($_SESSION['staff-data'])) {
                 }
 
             } else if ($staffData['role'] == 'security') {
-
-
 
                 $today = date('d/m/Y');
                 $sql = "SELECT * FROM visits WHERE date_of_visit = '$today' ORDER BY id DESC ";

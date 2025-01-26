@@ -5,7 +5,7 @@ include 'config.php';
 $fname = $_SESSION['fname'];
 $name = $_SESSION['name'];
 $phone = $_SESSION['phone'];
-echo $name;
+
 if(isset($_SESSION['ctrl_id'])) $ctrl_id = $_SESSION['ctrl_id'];
 if(isset($_SESSION['c_name'])) $company_name = $_SESSION['c_name'];
 if(isset($_SESSION['id'])) $id = $_SESSION['id'];

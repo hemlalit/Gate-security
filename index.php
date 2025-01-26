@@ -14,19 +14,22 @@ if (isset($_SESSION['staff-data'])) {
 if (isset($_POST['submit'])) {
 
     $name = mysqli_real_escape_string($conn, $_POST['name']);
+
     if (isset($_POST['p_user']))
         $parent = mysqli_real_escape_string($conn, $_POST['p_user']);
     if (isset($_POST['v_user']))
         $visitor = mysqli_real_escape_string($conn, $_POST['v_user']);
     if (isset($_POST['ve_user']))
         $vendor = mysqli_real_escape_string($conn, $_POST['ve_user']);
+
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    // $pwd = mysqli_real_escape_string($conn, $_POST['password']);
+
     if (isset($_POST['cid']))
         $ctrl_id = mysqli_real_escape_string($conn, $_POST['cid']);
     if (isset($_POST['c_name']))
         $company_name = mysqli_real_escape_string($conn, $_POST['c_name']);
+
     $aadhar_img_name = $_FILES['aadhar']['name'];
     $aadhar_size = $_FILES['aadhar']['size'];
     $aadhar_tmp_name = $_FILES['aadhar']['tmp_name'];
@@ -112,10 +115,10 @@ if (isset($_POST['hidden_login'])) {
     <link rel="stylesheet" href="index.css">
 
     <link rel=”stylesheet” href=”http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css” />
-    
+
     <!----======== jQuery ======== -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <script src=”http://code.jquery.com/jquery-1.11.1.min.js”></script>
     <script src=”http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js”></script>
 
@@ -181,20 +184,23 @@ if (isset($_POST['hidden_login'])) {
                         </div>
                         <div class="form-element" id="cname">
                             <label>Company name</label>
-                            <input id="c-name" type="text" name="c_name" placeholder="Enter your company's name">
+                            <input id="c-name" type="text" name="c_name" placeholder="Enter company's name">
                         </div>
-                        <div class="form-element" id="p_user">
-                            <label>User Type</label>
-                            <input id="parent" type="text" name="p_user" value="parent" readonly>
+                        <div class="user-type" hidden>
+                            <div class="form-element" id="p_user">
+                                <label>User Type</label>
+                                <input id="parent" type="text" name="p_user" value="parent" readonly>
+                            </div>
+                            <div class="form-element" id="v_user">
+                                <label>User Type</label>
+                                <input id="visitor" type="text" name="v_user" value="visitor" readonly>
+                            </div>
+                            <div class="form-element" id="ve_user">
+                                <label>User Type</label>
+                                <input id="vendor" type="text" name="ve_user" value="vendor" readonly>
+                            </div>
                         </div>
-                        <div class="form-element" id="v_user">
-                            <label>User Type</label>
-                            <input id="visitor" type="text" name="v_user" value="visitor" readonly>
-                        </div>
-                        <div class="form-element" id="ve_user">
-                            <label>User Type</label>
-                            <input id="vendor" type="text" name="ve_user" value="vendor" readonly>
-                        </div>
+
                         <div class="aadhar">
                             <label>Aadhar</label>
                             <div class="input">
